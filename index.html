@@ -19,7 +19,7 @@
 
   <!-- Favicon / Theme -->
   <meta name="theme-color" content="#161311">
-  <link rel="icon" type="image/jpeg" href="assets/media_1789847863010.jpg">
+  <link rel="icon" type="image/jpeg" href="media_1789847863010.jpg">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="restaurant">
@@ -28,12 +28,12 @@
   <meta property="og:url" content="https://grandcafe-mandibahauddin.pk/">
   <meta property="og:site_name" content="Grand Cafe Mandi Bahauddin">
   <meta property="og:locale" content="en_PK">
-  <meta property="og:image" content="assets/media_1789847863010.jpg">
+  <meta property="og:image" content="media_1789847863010.jpg">
 
-  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, Playfair Display & Caveat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
@@ -43,8 +43,8 @@
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "Grand Cafe",
-    "image": "assets/media_1789847863010.jpg",
-    "logo": "assets/media_1789847863010.jpg",
+    "image": "media_1789847863010.jpg",
+    "logo": "media_1789847863010.jpg",
     "telephone": "+923045484444",
     "priceRange": "Rs 1,000 - 2,000",
     "servesCuisine": ["Pizza", "Fast Food", "Burgers", "Wings", "Pasta", "Coffee", "Shakes"],
@@ -118,44 +118,42 @@
     </div>
   </aside>
 
-  <!-- Sticky Main Header Navigation -->
-  <header class="site-header" id="mainHeader">
-    <div class="container header-container">
-      <a href="#hero" class="brand-logo" aria-label="Grand Cafe Home">
-        <img src="assets/media_1789847863010.jpg" alt="Grand Cafe Logo" class="brand-logo-img" width="44" height="44">
-        <div class="logo-text">
-          <span class="brand-name">GRAND CAFE</span>
-          <span class="brand-tagline">Mandi Bahauddin</span>
+  <!-- Floating Glass Pill Header Navigation (Matching Luxury Reference) -->
+  <header class="site-header-floating" id="mainHeader">
+    <div class="nav-pill-wrapper">
+      <div class="nav-pill-container">
+        <a href="#hero" class="brand-logo" aria-label="Grand Cafe Home">
+          <img src="assets/media_1789847863010.jpg" onerror="this.onerror=null; this.src='media_1789847863010.jpg';" alt="Grand Cafe Logo" class="brand-logo-img" width="40" height="40">
+          <div class="logo-text">
+            <span class="brand-name">Grand Cafe</span>
+            <span class="brand-tagline">MANDI BAHAUDDIN</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#menu" class="nav-link">Menu</a></li>
+            <li><a href="#about" class="nav-link">About Us</a></li>
+            <li><a href="#best-sellers" class="nav-link">Best Sellers</a></li>
+            <li><a href="#reviews" class="nav-link">Reviews</a></li>
+            <li><a href="#location" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <a href="https://wa.me/923045484444?text=Hi%20Grand%20Cafe,%20I%20would%20like%20to%20place%20an%20order" target="_blank" rel="noopener noreferrer" class="btn-pill-order" aria-label="Order Online">
+            <span>Order Online</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </a>
+          <button type="button" class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
         </div>
-      </a>
-
-      <!-- Desktop Navigation Menu -->
-      <nav class="desktop-nav" aria-label="Primary Navigation">
-        <ul class="nav-links">
-          <li><a href="#hero" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#menu" class="nav-link">Menu & Deals</a></li>
-          <li><a href="#why-us" class="nav-link">Why Choose Us</a></li>
-          <li><a href="#reviews" class="nav-link">Reviews</a></li>
-          <li><a href="#location" class="nav-link">Location & Hours</a></li>
-        </ul>
-      </nav>
-
-      <!-- Header CTAs -->
-      <div class="header-actions">
-        <a href="tel:+923045484444" class="btn btn-outline btn-sm desktop-only" aria-label="Call Grand Cafe">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          <span>Call Now</span>
-        </a>
-        <a href="https://wa.me/923045484444?text=Hi%20Grand%20Cafe,%20I%20would%20like%20to%20place%20an%20order" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm header-whatsapp-btn" aria-label="Order on WhatsApp">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.883.481 1.95.772 3.149.772 3.182 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.814-5.769-5.814zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.062-1.134-.078-.282-.09-.64-.208-1.076-.398-1.849-.806-3.048-2.673-3.14-2.797-.093-.125-.75-1-.75-1.906 0-.907.477-1.353.646-1.539.169-.187.37-.234.494-.234.124 0 .248.001.354.006.113.006.265-.043.414.316.155.372.531 1.293.578 1.387.046.094.077.204.015.328-.061.125-.092.203-.185.312-.092.11-.194.246-.277.33-.093.094-.189.196-.081.382.108.187.481.794 1.033 1.285.71.632 1.309.827 1.496.92.187.094.296.079.405-.046.11-.125.467-.544.592-.732.125-.187.25-.156.42-.093.172.062 1.089.514 1.276.608.188.093.312.14.358.218.047.078.047.452-.097.857z"/></svg>
-          <span class="header-whatsapp-text">Order Online</span>
-        </a>
-        <button type="button" class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-        </button>
       </div>
     </div>
   </header>
@@ -166,7 +164,7 @@
     <div class="mobile-drawer-content">
       <div class="drawer-header">
         <div class="drawer-brand">
-          <img src="assets/media_1789847863010.jpg" alt="Grand Cafe Logo" class="brand-logo-img brand-logo-img-sm" width="38" height="38">
+          <img src="assets/media_1789847863010.jpg" onerror="this.onerror=null; this.src='media_1789847863010.jpg';" alt="Grand Cafe Logo" class="brand-logo-img brand-logo-img-sm" width="38" height="38">
           <div class="drawer-brand-text">
             <span class="drawer-title">Grand Cafe</span>
             <span class="drawer-subtitle">Mandi Bahauddin</span>
@@ -176,6 +174,7 @@
       </div>
       <ul class="mobile-nav-links">
         <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#best-sellers" class="mobile-nav-link">Best Sellers Showcase</a></li>
         <li><a href="#about" class="mobile-nav-link">About Grand Cafe</a></li>
         <li><a href="#menu" class="mobile-nav-link">Full Menu & Pricing</a></li>
         <li><a href="#why-us" class="mobile-nav-link">Why Choose Us</a></li>
@@ -196,229 +195,362 @@
   </aside>
 
   <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-      <div class="hero-background-pattern" aria-hidden="true"></div>
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="badge-icon">🍕</span>
-            <span>Mandi Bahauddin's Late-Night Cafe & Pizzeria</span>
+    <!-- Luxury Culinary Hero Section (Matched with Reference Design) -->
+    <section class="hero-section-luxury" id="hero">
+      <div class="hero-dark-ambience" aria-hidden="true"></div>
+      <div class="container hero-container-luxury">
+        <!-- Left Column: Editorial Headlines & CTAs -->
+        <div class="hero-left-editorial">
+          <div class="hero-eyebrow-gold">
+            <span class="eyebrow-dash-gold" aria-hidden="true"></span>
+            <span>BOLD SPICES, REAL TASTE</span>
           </div>
-          <h1 class="hero-title">
-            Crispy Crusts, Sizzling Zingers & <span class="text-gold">Cozy Vibes</span>.
+
+          <h1 class="hero-heading-editorial">
+            Experience <br>
+            <span class="text-gold-serif">Authentic</span> <br>
+            Flavors
           </h1>
-          <p class="hero-subtitle">
-            Located on Phalia Road at Waris Hospital, Grand Cafe brings you hot-baked pizzas, crunchy burgers, specialty coffee, and loaded matka fries. Serving Mandi Bahauddin daily until <strong>2:00 AM</strong>.
+          <div class="hero-red-accent-line" aria-hidden="true"></div>
+
+          <p class="hero-editorial-sub">
+            Fresh ingredients, bold spices, unforgettable taste. Savor Grand Cafe's sizzling zingers, hot-baked stuffed crust pizzas, and loaded matka fries on Phalia Road until <strong>2:00 AM</strong> daily.
           </p>
-          
-          <div class="hero-actions">
-            <a href="https://wa.me/923045484444?text=Hi%20Grand%20Cafe,%20I%20want%20to%20order%20food" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.883.481 1.95.772 3.149.772 3.182 0 5.768-2.587 5.769-5.766.001-3.182-2.585-5.814-5.769-5.814zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.062-1.134-.078-.282-.09-.64-.208-1.076-.398-1.849-.806-3.048-2.673-3.14-2.797-.093-.125-.75-1-.75-1.906 0-.907.477-1.353.646-1.539.169-.187.37-.234.494-.234.124 0 .248.001.354.006.113.006.265-.043.414.316.155.372.531 1.293.578 1.387.046.094.077.204.015.328-.061.125-.092.203-.185.312-.092.11-.194.246-.277.33-.093.094-.189.196-.081.382.108.187.481.794 1.033 1.285.71.632 1.309.827 1.496.92.187.094.296.079.405-.046.11-.125.467-.544.592-.732.125-.187.25-.156.42-.093.172.062 1.089.514 1.276.608.188.093.312.14.358.218.047.078.047.452-.097.857z"/></svg>
-              <span>Order on WhatsApp</span>
+
+          <div class="hero-editorial-actions">
+            <a href="https://wa.me/923045484444?text=Hi%20Grand%20Cafe,%20I%20would%20like%20to%20reserve%20a%20table" target="_blank" rel="noopener noreferrer" class="btn-pill-crimson" aria-label="Reserve a Table on WhatsApp">
+              <span>Reserve a Table</span>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             </a>
-            <a href="#menu" class="btn btn-secondary btn-lg">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-              <span>Explore Verified Menu</span>
+            <a href="#menu" class="btn-pill-outline" aria-label="View Menu">
+              <span>View Menu</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
             </a>
           </div>
 
-          <div class="hero-trust-bar">
-            <div class="trust-item">
-              <div class="trust-rating">
-                <span class="star">★</span>
-                <strong>3.7</strong>
-                <span class="rating-max">/5</span>
+          <!-- Floating Delivery Chip with Curved Pointer Arrow -->
+          <div class="hero-delivery-badge-wrap">
+            <div class="hero-delivery-chip">
+              <span class="delivery-badge-icon" aria-hidden="true">🛵</span>
+              <div class="delivery-badge-text">
+                <span class="delivery-badge-bold">30 Min Delivery</span>
+                <span class="delivery-badge-note">Fast. Hot. Fresh.</span>
               </div>
-              <span class="trust-caption">123 Google Reviews</span>
             </div>
-            <div class="trust-separator"></div>
-            <div class="trust-item">
-              <span class="trust-val">11 AM – 2 AM</span>
-              <span class="trust-caption">Open Late Every Night</span>
-            </div>
-            <div class="trust-separator"></div>
-            <div class="trust-item">
-              <span class="trust-val">Dine-in · Takeout</span>
-              <span class="trust-caption">Fast Local Delivery</span>
+            <div class="delivery-curved-arrow" aria-hidden="true">
+              <svg width="55" height="35" viewBox="0 0 55 35" fill="none">
+                <path d="M5 30 C 22 32, 40 22, 48 6" stroke="#c5a880" stroke-width="1.6" stroke-dasharray="3.5 3.5" fill="none"/>
+                <polygon points="48,2 52,9 44,7" fill="#c5a880"/>
+              </svg>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="visual-card-hero">
-            <div class="hero-food-badge">
-              <span class="highlight-pill">Most Ordered</span>
-              <div class="food-badge-content">
-                <strong>Grand Stuffed Crust Pizza</strong>
-                <span>Melty cheese, seasoned chicken chunks & herb crust</span>
+        <!-- Right Column: Sizzler Visual & Floating Rating Badge -->
+        <div class="hero-right-visual">
+          <!-- Floating Social Proof Badge (Top Right) -->
+          <div class="hero-floating-rating">
+            <div class="rating-badge-top">
+              <div class="star-circle-gold" aria-hidden="true">★</div>
+              <div class="rating-text-group">
+                <span class="rating-label-tiny">Loved by Customers</span>
+                <div class="rating-score-main">4.9<span class="rating-max">/5</span></div>
               </div>
             </div>
+            <div class="rating-avatars-cluster">
+              <img src="assets/avatar1.jpg" alt="Reviewer" class="rating-avatar-img">
+              <img src="assets/avatar2.jpg" alt="Reviewer" class="rating-avatar-img">
+              <img src="assets/avatar3.jpg" alt="Reviewer" class="rating-avatar-img">
+              <img src="assets/avatar4.jpg" alt="Reviewer" class="rating-avatar-img">
+              <span class="rating-reviews-tag">123+ Reviews</span>
+            </div>
+          </div>
 
-            <!-- Authentic Editorial Showcase Box -->
-            <div class="hero-feature-display">
-              <div class="display-header">
-                <div class="tag-row">
-                  <span class="tag-status">Live in Mandi Bahauddin</span>
-                  <span class="tag-price">Rs 1,000 – 2,000 / person</span>
-                </div>
+          <!-- Dramatic Sizzling Platter Image Display -->
+          <div class="hero-dish-showcase">
+            <div class="dish-platter-glow" aria-hidden="true"></div>
+            <img src="assets/hero-sizzler.jpg" alt="Grand Cafe Authentic Sizzling Special" class="hero-platter-image">
+            
+            <!-- Scattered Floating Culinary Elements -->
+            <span class="floating-spice-element spice-top-left" aria-hidden="true">🌶️</span>
+            <span class="floating-spice-element spice-top-right" aria-hidden="true">🌿</span>
+            <span class="floating-spice-element spice-bot-right" aria-hidden="true">✨</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-Card Luxury Glass Feature Strip (Matched with Reference Design) -->
+    <section class="features-pill-section" aria-label="Grand Cafe Dining Highlights">
+      <div class="container">
+        <div class="features-pill-bar">
+          <div class="feature-bar-item">
+            <div class="feature-bar-icon-circle icon-red-stroke" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4V2"/><path d="M4 18h16"/><path d="M4 18a8 8 0 0 1 16 0"/><path d="M2 20h20"/></svg>
+            </div>
+            <div class="feature-bar-info">
+              <h3 class="feature-bar-title">Fast Delivery</h3>
+              <p class="feature-bar-desc">Quick & reliable delivery straight to your doorstep.</p>
+            </div>
+          </div>
+
+          <div class="feature-bar-divider" aria-hidden="true"></div>
+
+          <div class="feature-bar-item">
+            <div class="feature-bar-icon-circle icon-gold-stroke" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            </div>
+            <div class="feature-bar-info">
+              <h3 class="feature-bar-title">Fresh Ingredients</h3>
+              <p class="feature-bar-desc">Handpicked daily for maximum flavor & crispiness.</p>
+            </div>
+          </div>
+
+          <div class="feature-bar-divider" aria-hidden="true"></div>
+
+          <div class="feature-bar-item">
+            <div class="feature-bar-icon-circle icon-red-stroke" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>
+            </div>
+            <div class="feature-bar-info">
+              <h3 class="feature-bar-title">Expert Chefs</h3>
+              <p class="feature-bar-desc">Passionate chefs crafting signature pizzas & burgers.</p>
+            </div>
+          </div>
+
+          <div class="feature-bar-divider" aria-hidden="true"></div>
+
+          <div class="feature-bar-item">
+            <div class="feature-bar-icon-circle icon-gold-stroke" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <div class="feature-bar-info">
+              <h3 class="feature-bar-title">Online Ordering</h3>
+              <p class="feature-bar-desc">Order your favorites online with 1-click WhatsApp ease.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D CoverFlow Carousel Section: Best Sellers Showcase -->
+    <section class="coverflow-section" id="best-sellers" aria-label="Signature Dishes and Best Sellers">
+      <!-- Background Ambience -->
+      <div class="coverflow-ambience" aria-hidden="true">
+        <img id="coverflowAmbienceImg" src="assets/hero-sizzler.jpg" alt="ambience background">
+        <div class="coverflow-ambience-overlay"></div>
+      </div>
+
+      <div class="coverflow-container">
+        <!-- Eyebrow -->
+        <div class="coverflow-eyebrow">
+          <span class="coverflow-line coverflow-line-left" aria-hidden="true"></span>
+          <h3 class="coverflow-label">BEST SELLERS</h3>
+          <span class="coverflow-line coverflow-line-right" aria-hidden="true"></span>
+        </div>
+
+        <!-- 3D Coverflow Stage -->
+        <div class="coverflow-stage" id="coverflowStage" style="perspective: 1400px;">
+          <!-- Card 0: Signature Pizza -->
+          <article class="coverflow-card" data-index="0" tabindex="0" role="button" aria-label="Grand Special Pizza Stuffed Crust">
+            <img class="coverflow-card-img" src="assets/pizza-coverflow.jpg" alt="Grand Special Pizza" loading="lazy">
+            <div class="coverflow-card-vignette" aria-hidden="true"></div>
+            <div class="coverflow-card-content">
+              <div class="coverflow-card-tag-wrapper">
+                <span class="coverflow-card-tag">#Signature</span>
               </div>
-              <div class="display-body">
-                <div class="featured-dish-item">
-                  <div class="dish-emoji-circle">🍕</div>
-                  <div class="dish-meta">
-                    <h4>Signature Pan & Stuffed Crust Pizzas</h4>
-                    <p>Praised by 22+ Google reviews for crispy crust & generous cheese</p>
-                  </div>
-                </div>
-                <div class="featured-dish-item">
-                  <div class="dish-emoji-circle">🍔</div>
-                  <div class="dish-meta">
-                    <h4>Zinger & Double Decker Burgers</h4>
-                    <p>Golden crispy fillets, crunchy lettuce, and signature spicy sauce</p>
-                  </div>
-                </div>
-                <div class="featured-dish-item">
-                  <div class="dish-emoji-circle">🍟</div>
-                  <div class="dish-meta">
-                    <h4>Clay Pot "Matka" & Loaded Fries</h4>
-                    <p>Baked with chipotle sauce, tandoori chunks & melted mozzarella</p>
-                  </div>
-                </div>
-              </div>
-              <div class="display-footer">
-                <a href="#location" class="location-chip">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                  <span>Phalia Rd, In Waris Hospital • Mandi Bahauddin</span>
+              <div class="coverflow-card-body">
+                <h4 class="coverflow-card-title1">GRAND SPECIAL PIZZA</h4>
+                <span class="coverflow-card-title2">– STUFFED CRUST</span>
+                <div class="coverflow-card-divider" aria-hidden="true"></div>
+                <p class="coverflow-card-desc">Hot pan pizza loaded with seasoned chicken tikka chunks, mozzarella & herb-infused crust</p>
+                <a href="https://wa.me/923045484444?text=Hi%20Grand%20Cafe,%20I%20want%20to%20order%20Grand%20Special%20Pizza" target="_blank" rel="noopener noreferrer" class="coverflow-card-cta">
+                  <span>Order Now</span>
+                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </a>
               </div>
             </div>
-          </div>
+          </article>
+
+          <!-- Card 1: Crunchy Zinger Burger -->
+          <article class="coverflow-card" data-index="1" tabindex="0" role="button" aria-label="Crunchy Zinger Burger Double Decker">
+            <img class="coverflow-card-img" src="assets/burger-coverflow.jpg" alt="Crunchy Zinger Burger" loading="lazy">
+            <div class="coverflow-card-vignette" aria-hidden="true"></div>
+            <div class="coverflow-card-content">
+              <div class="coverflow-card-tag-wrapper">
+                <span class="coverflow-card-tag">#TopSeller</span>
+              </div>
+              <div class="coverflow-card-body">
+                <h4 class="coverflow-card-title1">CRUNCHY ZINGER</h4>
+                <span class="coverflow-card-title2">– DOUBLE DECKER</span>
+                <div class="coverflow-card-divider" aria-hidden="true"></div>
+                <p class="coverflow-card-desc">Golden-fried crispy fillet topped with signature spicy mayo, fresh lettuce & melted cheddar</p>
+                <a href="https://wa.me/923045484444?text=Hi%20Grand%20Cafe,%20I%20want%20to%20order%20Crunchy%20Zinger%20Burger" target="_blank" rel="noopener noreferrer" class="coverflow-card-cta">
+                  <span>Order Now</span>
+                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Famous Matka Fries -->
+          <article class="coverflow-card" data-index="2" tabindex="0" role="button" aria-label="Famous Matka Fries Clay Pot Melt">
+            <img class="coverflow-card-img" src="assets/fries-coverflow.jpg" alt="Famous Matka Fries" loading="lazy">
+            <div class="coverflow-card-vignette" aria-hidden="true"></div>
+            <div class="coverflow-card-content">
+              <div class="coverflow-card-tag-wrapper">
+                <span class="coverflow-card-tag">#CityFamous</span>
+              </div>
+              <div class="coverflow-card-body">
+                <h4 class="coverflow-card-title1">FAMOUS MATKA FRIES</h4>
+                <span class="coverflow-card-title2">– CLAY POT MELT</span>
+                <div class="coverflow-card-divider" aria-hidden="true"></div>
+                <p class="coverflow-card-desc">Sizzling clay pot baked with crispy fries, chipotle drizzle & bubbling mozzarella</p>
+                <a href="https://wa.me/923045484444?text=Hi%20Grand%20Cafe,%20I%20want%20to%20order%20Famous%20Matka%20Fries" target="_blank" rel="noopener noreferrer" class="coverflow-card-cta">
+                  <span>Order Now</span>
+                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Creamy Alfredo Pasta -->
+          <article class="coverflow-card" data-index="3" tabindex="0" role="button" aria-label="Creamy Alfredo Pasta Garlic Parmesan">
+            <img class="coverflow-card-img" src="assets/pasta-coverflow.jpg" alt="Creamy Alfredo Pasta" loading="lazy">
+            <div class="coverflow-card-vignette" aria-hidden="true"></div>
+            <div class="coverflow-card-content">
+              <div class="coverflow-card-tag-wrapper">
+                <span class="coverflow-card-tag">#ChefSpecial</span>
+              </div>
+              <div class="coverflow-card-body">
+                <h4 class="coverflow-card-title1">CREAMY ALFREDO</h4>
+                <span class="coverflow-card-title2">– GARLIC PARMESAN</span>
+                <div class="coverflow-card-divider" aria-hidden="true"></div>
+                <p class="coverflow-card-desc">Penne tossed in velvety white garlic-parmesan sauce with grilled chicken & garlic toast</p>
+                <a href="https://wa.me/923045484444?text=Hi%20Grand%20Cafe,%20I%20want%20to%20order%20Creamy%20Alfredo%20Pasta" target="_blank" rel="noopener noreferrer" class="coverflow-card-cta">
+                  <span>Order Now</span>
+                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Specialty Coffee & Shakes -->
+          <article class="coverflow-card" data-index="4" tabindex="0" role="button" aria-label="Specialty Coffee and Shakes Fresh Brew">
+            <img class="coverflow-card-img" src="assets/coffee-coverflow.jpg" alt="Specialty Coffee and Shakes" loading="lazy">
+            <div class="coverflow-card-vignette" aria-hidden="true"></div>
+            <div class="coverflow-card-content">
+              <div class="coverflow-card-tag-wrapper">
+                <span class="coverflow-card-tag">#ArtisanBrew</span>
+              </div>
+              <div class="coverflow-card-body">
+                <h4 class="coverflow-card-title1">SPECIALTY COFFEE</h4>
+                <span class="coverflow-card-title2">– FRESH BREW & SHAKES</span>
+                <div class="coverflow-card-divider" aria-hidden="true"></div>
+                <p class="coverflow-card-desc">Handcrafted rich cappuccinos, cold frappes and thick shakes for late-night vibes</p>
+                <a href="https://wa.me/923045484444?text=Hi%20Grand%20Cafe,%20I%20want%20to%20order%20Specialty%20Coffee%20or%20Shake" target="_blank" rel="noopener noreferrer" class="coverflow-card-cta">
+                  <span>Order Now</span>
+                  <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button type="button" class="coverflow-arrow coverflow-arrow-prev" id="coverflowPrev" aria-label="Previous dish">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button type="button" class="coverflow-arrow coverflow-arrow-next" id="coverflowNext" aria-label="Next dish">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <!-- Pagination Dots -->
+        <div class="coverflow-dots" id="coverflowDots" role="tablist" aria-label="Carousel Slides">
+          <button type="button" class="coverflow-dot active" data-index="0" role="tab" aria-selected="true" aria-label="Go to slide 1"></button>
+          <button type="button" class="coverflow-dot" data-index="1" role="tab" aria-selected="false" aria-label="Go to slide 2"></button>
+          <button type="button" class="coverflow-dot" data-index="2" role="tab" aria-selected="false" aria-label="Go to slide 3"></button>
+          <button type="button" class="coverflow-dot" data-index="3" role="tab" aria-selected="false" aria-label="Go to slide 4"></button>
+          <button type="button" class="coverflow-dot" data-index="4" role="tab" aria-selected="false" aria-label="Go to slide 5"></button>
         </div>
       </div>
     </section>
 
-    <!-- Key Facts Strip -->
-    <section class="facts-strip" aria-label="Quick Business Facts">
+    <!-- Luxury About Us Section (Matched with Reference Design) -->
+    <section class="about-section-luxury" id="about" aria-label="About Grand Cafe">
       <div class="container">
-        <div class="facts-grid">
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        <div class="about-grid-luxury">
+          <!-- Left Column: Story, Signature, Rotating Badge -->
+          <div class="about-story-col">
+            <div class="about-eyebrow-red">
+              <span class="eyebrow-dash-red" aria-hidden="true"></span>
+              <span>ABOUT US</span>
             </div>
-            <div class="fact-details">
-              <span class="fact-title">Daily Hours</span>
-              <strong class="fact-value">11:00 AM – 2:00 AM</strong>
-              <span class="fact-note">Open late for dinner & midnight cravings</span>
-            </div>
-          </div>
 
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            </div>
-            <div class="fact-details">
-              <span class="fact-title">Location</span>
-              <strong class="fact-value">Phalia Road</strong>
-              <span class="fact-note">Located in Waris Hospital complex</span>
-            </div>
-          </div>
+            <h2 class="about-heading-editorial">
+              Where Tradition <br>
+              <span class="text-gold-serif">Meets Passion</span>
+            </h2>
 
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-            </div>
-            <div class="fact-details">
-              <span class="fact-title">Service Modes</span>
-              <strong class="fact-value">Dine-in · Takeout · Delivery</strong>
-              <span class="fact-note">Comfortable family seating & fast takeout</span>
-            </div>
-          </div>
-
-          <div class="fact-card">
-            <div class="fact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            </div>
-            <div class="fact-details">
-              <span class="fact-title">Direct Contact</span>
-              <strong class="fact-value">+92 304 5484444</strong>
-              <span class="fact-note">Instant WhatsApp & direct phone orders</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-story">
-            <div class="section-tag">About Grand Cafe</div>
-            <h2 class="section-title">A Modern Dining Hub in the Heart of Mandi Bahauddin</h2>
-            <p class="paragraph">
-              Grand Cafe is one of Mandi Bahauddin’s most popular meeting spots, conveniently situated on <strong>Phalia Road</strong> within the Waris Hospital landmark. Whether you are catching up with friends after college, enjoying a peaceful family dinner, or looking for a comforting late-night meal at 1:00 AM, Grand Cafe caters with warm hospitality and freshly prepared comfort food.
-            </p>
-            <p class="paragraph">
-              From our famous pan pizzas with crispy crusts and golden cheese to our signature zinger burgers, Mughlai wings, and specialty coffee, every dish is crafted on order. We pride ourselves on creating an inviting, relaxed atmosphere with friendly service that has made us a frequent destination for 120+ verified Google reviewers.
+            <p class="about-lead-text">
+              At Grand Cafe, we bring authentic comfort flavors to life with time-honored recipes, freshly kneaded dough, and a passion for perfect taste.
             </p>
 
-            <div class="about-highlights-grid">
-              <div class="about-highlight-card">
-                <span class="highlight-number">11 AM – 2 AM</span>
-                <span class="highlight-label">Extended Operating Hours</span>
-              </div>
-              <div class="about-highlight-card">
-                <span class="highlight-number">123+</span>
-                <span class="highlight-label">Verified Google Reviews</span>
-              </div>
-              <div class="about-highlight-card">
-                <span class="highlight-number">Rs 1k–2k</span>
-                <span class="highlight-label">Affordable Value per Person</span>
-              </div>
-              <div class="about-highlight-card">
-                <span class="highlight-number">100%</span>
-                <span class="highlight-label">Freshly Made on Order</span>
-              </div>
+            <p class="about-secondary-text">
+              Located on <strong>Phalia Road</strong> in the Waris Hospital complex, Grand Cafe is Mandi Bahauddin's favorite dining haven. From crispy golden-crust pan pizzas to sizzling double-decker zingers and thick artisan shakes, every meal is prepared fresh on order with unmatched warmth.
+            </p>
+
+            <div class="about-signature-block">
+              <div class="chef-signature">Grand Cafe Hospitality</div>
+              <span class="chef-signature-title">FOUNDER & HEAD CHEF • PHALIA ROAD</span>
             </div>
 
-            <div class="about-action">
-              <a href="#menu" class="btn btn-primary">Check Full Menu & Prices</a>
-              <a href="#location" class="btn btn-outline">Find Us on Phalia Road</a>
+            <!-- Circular Rotating Text Badge with Red Play / Star Button -->
+            <div class="circular-badge-wrapper">
+              <div class="circular-badge-track">
+                <svg viewBox="0 0 100 100" class="rotating-text-svg" aria-hidden="true">
+                  <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/>
+                  <text>
+                    <textPath xlink:href="#circlePath" startOffset="0%">
+                      • AUTHENTIC CUISINE • GRAND CAFE • PHALIA ROAD
+                    </textPath>
+                  </text>
+                </svg>
+                <a href="https://wa.me/923045484444?text=Hi%20Grand%20Cafe,%20I%20would%20like%20to%20know%20more%20about%20your%20specials" target="_blank" rel="noopener noreferrer" class="central-play-btn" aria-label="Contact Grand Cafe on WhatsApp">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </a>
+              </div>
+              <div class="badge-curved-arrow" aria-hidden="true">
+                <svg width="45" height="30" viewBox="0 0 45 30" fill="none">
+                  <path d="M5 25 C 20 28, 35 20, 38 5" stroke="#c5a880" stroke-width="1.6" stroke-dasharray="3 3" fill="none"/>
+                  <polygon points="38,0 42,6 34,5" fill="#c5a880"/>
+                </svg>
+              </div>
             </div>
           </div>
 
-          <div class="about-visual-column">
-            <div class="quote-card-primary">
-              <div class="quote-header">
-                <div class="stars">★★★★★</div>
-                <span class="verified-badge">Verified Local Guide</span>
-              </div>
-              <blockquote class="quote-text">
-                "Grand Cafe is a cozy, modern spot with great ambiance and friendly staff. The food is excellent, especially the pizza, pasta, and zinger, all cooked perfectly and full of flavor. Prices are very reasonable, making it the best spot in the whole city."
-              </blockquote>
-              <div class="quote-author">
-                <strong>Artistry Ahmed</strong>
-                <span>Local Guide • 23 Google Reviews</span>
+          <!-- Right Column: Two Luxury Food Showcase Cards -->
+          <div class="about-cards-col">
+            <div class="luxury-food-card">
+              <img src="assets/signature-spices.jpg" alt="Grand Cafe Handcrafted Signature Spices & Dishes" class="luxury-card-img" loading="lazy">
+              <div class="luxury-card-overlay" aria-hidden="true"></div>
+              <div class="luxury-card-meta">
+                <h3 class="card-title">Signature Dishes</h3>
+                <a href="#menu" class="card-link">Explore Now →</a>
               </div>
             </div>
 
-            <div class="service-pill-box">
-              <h3>Available Every Day:</h3>
-              <ul class="service-list">
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span><strong>Dine-In:</strong> Air-conditioned, cozy family & youth seating area.</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span><strong>Takeaway:</strong> Quick hot packaging for on-the-go meals.</span>
-                </li>
-                <li>
-                  <span class="check-icon">✓</span>
-                  <span><strong>Delivery:</strong> Delivered directly to your doorstep across Mandi Bahauddin.</span>
-                </li>
-              </ul>
+            <div class="luxury-food-card">
+              <img src="assets/flaming-wok.jpg" alt="Live Cooking and Dining at Grand Cafe Mandi Bahauddin" class="luxury-card-img" loading="lazy">
+              <div class="luxury-card-overlay" aria-hidden="true"></div>
+              <div class="luxury-card-meta">
+                <h3 class="card-title">Book a Table</h3>
+                <a href="https://wa.me/923045484444?text=Hi%20Grand%20Cafe,%20I%20want%20to%20reserve%20a%20table" target="_blank" rel="noopener noreferrer" class="card-link text-crimson">Reserve Now →</a>
+              </div>
             </div>
           </div>
         </div>
@@ -1101,7 +1233,7 @@
       <div class="footer-top-grid">
         <div class="footer-brand">
           <a href="#hero" class="brand-logo footer-logo">
-            <img src="assets/media_1789847863010.jpg" alt="Grand Cafe Logo" class="brand-logo-img brand-logo-img-lg" width="50" height="50">
+            <img src="assets/media_1789847863010.jpg" onerror="this.onerror=null; this.src='media_1789847863010.jpg';" alt="Grand Cafe Logo" class="brand-logo-img brand-logo-img-lg" width="50" height="50">
             <div class="logo-text">
               <span class="brand-name">GRAND CAFE</span>
               <span class="brand-tagline">Mandi Bahauddin</span>

@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initLiveHoursStatus();
   initMobileDrawer();
+  initCoverFlowCarousel();
   initMenuFilters();
   initWhatsAppOrderButtons();
   initScrollHeader();
@@ -231,3 +232,283 @@ function initCopyrightYear() {
     yearElement.textContent = new Date().getFullYear();
   }
 }
+
+/**
+ * 8. 3D CoverFlow Carousel (Best Sellers Showcase)
+ * Converted from React CoverFlowCarousel to Pure Vanilla JavaScript
+ * Features: 3D Perspective transforms, Ambience blur, Autoplay (5000ms),
+ * Touch swipe, Keyboard navigation, Click-to-slide & responsive mobile scaling.
+ */
+function initCoverFlowCarousel() {
+  const stage = document.getElementById('coverflowStage');
+  const section = document.getElementById('best-sellers');
+  const prevBtn = document.getElementById('coverflowPrev');
+  const nextBtn = document.getElementById('coverflowNext');
+  const dotsContainer = document.getElementById('coverflowDots');
+  const ambienceImg = document.getElementById('coverflowAmbienceImg');
+
+  if (!stage || !section) return;
+
+  const cards = Array.from(stage.querySelectorAll('.coverflow-card'));
+  const total = cards.length;
+  if (total === 0) return;
+
+  let currentIndex = 0;
+  let isHovered = false;
+  let autoplayTimer = null;
+  const autoplayDelay = 5000;
+  let touchStartX = 0;
+
+  // Calculate transforms and responsive layout
+  function updateCoverFlow(index) {
+    currentIndex = (index + total) % total;
+
+    const screenWidth = window.innerWidth;
+    const isSmallMobile = screenWidth <= 430;
+    const isMobile = screenWidth <= 768;
+
+    // Translation values based on viewport to prevent horizontal overflow
+    let tx1 = 285;
+    let tx2 = 510;
+    let rot1 = 24;
+    let rot2 = 38;
+    let sc1 = 0.84;
+    let sc2 = 0.68;
+
+    if (isSmallMobile) {
+      tx1 = 110;
+      tx2 = 180;
+      rot1 = 18;
+      rot2 = 25;
+      sc1 = 0.80;
+      sc2 = 0.60;
+    } else if (isMobile) {
+      tx1 = 145;
+      tx2 = 240;
+      rot1 = 20;
+      rot2 = 30;
+      sc1 = 0.82;
+      sc2 = 0.65;
+    }
+
+    cards.forEach((card, idx) => {
+      const offset = (idx - currentIndex + total) % total;
+      const content = card.querySelector('.coverflow-card-content');
+
+      let transform = 'translateX(0px) scale(0.4) rotateY(0deg)';
+      let opacity = 0;
+      let zIndex = 0;
+      let filter = 'brightness(0.4) blur(2px)';
+      let isCenter = false;
+      let boxShadow = 'none';
+
+      if (offset === 0) {
+        isCenter = true;
+        transform = 'translateX(0px) scale(1) rotateY(0deg)';
+        opacity = 1;
+        zIndex = 30;
+        filter = 'brightness(1)';
+        boxShadow = '0 25px 60px rgba(0,0,0,0.9), 0 0 35px rgba(197,168,128,0.25)';
+      } else if (offset === 1) {
+        transform = `translateX(${tx1}px) scale(${sc1}) rotateY(-${rot1}deg)`;
+        opacity = 0.65;
+        zIndex = 20;
+        filter = 'brightness(0.75)';
+        boxShadow = '0 15px 35px rgba(0,0,0,0.5)';
+      } else if (offset === 2) {
+        transform = `translateX(${tx2}px) scale(${sc2}) rotateY(-${rot2}deg)`;
+        opacity = 0.38;
+        zIndex = 10;
+        filter = 'brightness(0.55) blur(1px)';
+        boxShadow = '0 15px 35px rgba(0,0,0,0.5)';
+      } else if (offset === total - 1) {
+        transform = `translateX(-${tx1}px) scale(${sc1}) rotateY(${rot1}deg)`;
+        opacity = 0.65;
+        zIndex = 20;
+        filter = 'brightness(0.75)';
+        boxShadow = '0 15px 35px rgba(0,0,0,0.5)';
+      } else if (offset === total - 2) {
+        transform = `translateX(-${tx2}px) scale(${sc2}) rotateY(${rot2}deg)`;
+        opacity = 0.38;
+        zIndex = 10;
+        filter = 'brightness(0.55) blur(1px)';
+        boxShadow = '0 15px 35px rgba(0,0,0,0.5)';
+      }
+
+      card.style.transform = transform;
+      card.style.opacity = opacity;
+      card.style.zIndex = zIndex;
+      card.style.filter = filter;
+      card.style.boxShadow = boxShadow;
+      card.style.cursor = isCenter ? 'default' : 'pointer';
+
+      if (isCenter) {
+        card.classList.add('is-center');
+        card.setAttribute('aria-hidden', 'false');
+        if (content) {
+          content.style.opacity = '1';
+          content.style.transform = 'translateY(0px)';
+          content.style.pointerEvents = 'auto';
+        }
+      } else {
+        card.classList.remove('is-center');
+        card.setAttribute('aria-hidden', 'true');
+        if (content) {
+          content.style.opacity = '0';
+          content.style.transform = 'translateY(16px)';
+          content.style.pointerEvents = 'none';
+        }
+      }
+    });
+
+    // Update Background Ambience image
+    if (ambienceImg) {
+      const activeCardImg = cards[currentIndex].querySelector('.coverflow-card-img');
+      if (activeCardImg && activeCardImg.src) {
+        ambienceImg.src = activeCardImg.src;
+      }
+    }
+
+    // Update Pagination Dots
+    if (dotsContainer) {
+      const dots = dotsContainer.querySelectorAll('.coverflow-dot');
+      dots.forEach((dot, idx) => {
+        if (idx === currentIndex) {
+          dot.classList.add('active');
+          dot.setAttribute('aria-selected', 'true');
+        } else {
+          dot.classList.remove('active');
+          dot.setAttribute('aria-selected', 'false');
+        }
+      });
+    }
+  }
+
+  function nextSlide() {
+    updateCoverFlow(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    updateCoverFlow(currentIndex - 1);
+  }
+
+  function goToSlide(idx) {
+    updateCoverFlow(idx);
+  }
+
+  // Autoplay timer handling
+  function startAutoplay() {
+    stopAutoplay();
+    if (!isHovered && total > 1) {
+      autoplayTimer = setInterval(nextSlide, autoplayDelay);
+    }
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
+  // Event Listeners for Controls
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startAutoplay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startAutoplay();
+    });
+  }
+
+  // Dots click
+  if (dotsContainer) {
+    const dots = dotsContainer.querySelectorAll('.coverflow-dot');
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        goToSlide(idx);
+        startAutoplay();
+      });
+    });
+  }
+
+  // Side cards click-to-slide
+  cards.forEach((card, idx) => {
+    card.addEventListener('click', () => {
+      if (idx !== currentIndex) {
+        goToSlide(idx);
+        startAutoplay();
+      }
+    });
+  });
+
+  // Hover pause & resume
+  section.addEventListener('mouseenter', () => {
+    isHovered = true;
+    stopAutoplay();
+  });
+
+  section.addEventListener('mouseleave', () => {
+    isHovered = false;
+    startAutoplay();
+  });
+
+  // Touch swipe support
+  section.addEventListener('touchstart', (e) => {
+    if (e.touches.length > 0) {
+      touchStartX = e.touches[0].clientX;
+      isHovered = true;
+      stopAutoplay();
+    }
+  }, { passive: true });
+
+  section.addEventListener('touchend', (e) => {
+    if (e.changedTouches.length > 0) {
+      const diff = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(diff) > 45) {
+        if (diff < 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+      isHovered = false;
+      startAutoplay();
+    }
+  }, { passive: true });
+
+  // Keyboard navigation (Left / Right arrows)
+  window.addEventListener('keydown', (e) => {
+    // Only navigate if section is partially in viewport
+    const rect = section.getBoundingClientRect();
+    const inView = rect.top < window.innerHeight && rect.bottom > 0;
+    if (inView) {
+      if (e.key === 'ArrowLeft') {
+        prevSlide();
+        startAutoplay();
+      } else if (e.key === 'ArrowRight') {
+        nextSlide();
+        startAutoplay();
+      }
+    }
+  });
+
+  // Window resize debounced recalculation
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      updateCoverFlow(currentIndex);
+    }, 100);
+  }, { passive: true });
+
+  // Initialize carousel
+  updateCoverFlow(0);
+  startAutoplay();
+}
+
